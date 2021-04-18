@@ -1,0 +1,34 @@
+{
+  "name": "lines",
+  "version": "1.0.0",
+  "description": "Линии",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "webpack --mode production",
+    "build": "electron-builder"
+  },
+  "build": {
+    "productName": "lines",
+    "appId": "com.lines",
+    "asar": true,
+    "win": {
+      "target": "NSIS",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "author": "test",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron-builder": "^22.4.1",
+    "electron": "^8.2.1"
+  },
+  "dependencies": {
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0"
+  }
+}
